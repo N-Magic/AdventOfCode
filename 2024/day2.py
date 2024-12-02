@@ -1,3 +1,4 @@
+import sys
 def isSafeReport(report):
     increasing = None
     for i in range(1, len(report)):
@@ -20,12 +21,9 @@ def countSafeReports(file_path):
     reports = [list(map(int, line.split())) for line in data.splitlines()]
     safe_count = 0
     for report in reports:
-        for i in range(len(report)):
-            modified_report = report[:i] + report[i+1:]
-            if isSafeReport(modified_report):
-                safe_count += 1
-                break
+        if isSafeReport(report):
+            safe_count += 1
     return safe_count
-file_path = "2.in"
+file_path = sys.argv[1]
 safe_reports = countSafeReports(file_path)
 print(safe_reports)

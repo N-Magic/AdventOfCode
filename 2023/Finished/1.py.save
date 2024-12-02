@@ -1,9 +1,0 @@
-import sys
-D = open(sys.argv[1]).read().strip()
-total = 0
-firstDigit = 0
-lastDigit = 0
-digits = []
-for line in D.split('\n'):
-  for c in D.split(''):
-
