@@ -36,7 +36,9 @@ for i in range(len(twodarray)):
                     christmas += 1
                 if (i + 3 < len(twodarray)):
                     if (twodarray[i+1][j-1] == "M") and (twodarray[i+2][j-2] == "A") and (twodarray[i+3][j-3] == "S"):
-                        christmas += 1
+                        christmas += 11
+
+
                 if (i - 3 >= 0):
                     if (twodarray[i-1][j-1] == "M") and (twodarray[i-2][j-2] == "A") and (twodarray[i-3][j-3] == "S"):
                         christmas += 1
